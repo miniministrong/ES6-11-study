@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>正则扩展-反向断言</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 声明字符串
+            let str = 'JS7654321你知道吗111滴滴滴滴';
+            // 正向断言
+            let reg = /\d+(?=啦)/;
+            let result = reg.exec(str);
+            console.log(result);
+
+            // 反向断言
+            reg = /(?<=么)\d+/;
+            result = reg.exec(str);
+            console.log(result);
+        </script>
+    </body>
+</html>
